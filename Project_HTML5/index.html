@@ -7,16 +7,63 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://kit.fontawesome.com/34759a147d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Righteous&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="ws-container-fluid">
-        <section class="ws-site-header ws-flex-center ws-mb-50 ws-bgcolor-1 ws-border-rounded">
-            <i class="fa-camera-retro fa-solid"></i>
-            hi
+        <section class="ws-block ws-flex-center ws-mb-50 ws-bgcolor-1 ws-border-rounded">
+            <i class="fa fa-camera-retro fa-solid fs-2x"></i>
+            <h1>WebShot</h1>
+            <a href="html/webshot1.html">시작하기</a>
         </section>
 
+        <section class="ws-block ws-flex-center ws-mb-80 ws-bgcolor-2 ws-border-rounded">
+			<i class="fa fa-map-location-dot fa-solid fs-2x"></i>
+			<h1>Offline Photo booth</h1>
+            <a href="html/offlinemap.html">위치 보기</a>
+		</section>
     </div>
+
+    <div class="ws-gallery-section ws-mb-80">
+        <ul class="filters-button-group ws-mb-40">
+            <li><b href="#" data-filter=".city">City</b></li>
+            <li><b href="#" data-filter=".nature">Nature</b></li>
+            <li><b href="#" class="active" data-filter="*">Show All</b></li>
+        </ul>
+    </div>
+
     <script src="js/main.js"></script>
+    <script>
+		$(function(){
+		  	// Init the image gallery
+		  	var $gallery = $(".ws-gallery").isotope({
+		    	itemSelector: ".ws-gallery-item",
+		    	layoutMode: "fitRows"
+		  	});
+		  
+		  	// Layout Isotope after each image loads
+		  	$gallery.imagesLoaded().progress(function() {
+		    	$gallery.isotope("layout");
+		  	});
+
+		  	$(".filters-button-group").on("click", "a", function(e) {
+		  		e.preventDefault();
+			    var filterValue = $(this).attr("data-filter");
+			    $gallery.isotope({ filter: filterValue });
+			    $('.filters-button-group a').removeClass('active');
+			    $(this).addClass('active');
+			});
+
+		  	// Magnific Pop up
+		  	$('.ws-gallery').magnificPopup({
+		  		delegate: 'a',
+			  	type: 'image',
+				gallery: { enabled: true }
+			});
+		});
+	</script>
     
 </body>
 </html>
