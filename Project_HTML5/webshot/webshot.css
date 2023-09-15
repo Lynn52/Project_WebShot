@@ -1,0 +1,111 @@
+html{ overflow-x: hidden; }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 2em;
+    overflow-x: hidden;
+}
+
+.highlight{
+    font-family: 'Righteous', cursive;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px #183119;
+    margin-block-end: 0px;
+    justify-content: center;
+    text-align: center;
+}
+
+.text1 {
+    color: #183119;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 3px;
+}
+
+.text2 {
+    color: whitesmoke;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 10px 30px 10px 10px;
+    font-size: 25px;
+}
+
+.ws-container-fluid {
+    width: 100%;
+    max-width: 970px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 60px 15px;
+}
+
+.ws-block { 
+    height: 100px; 
+}
+
+.ws-flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fcontainer{
+    display: flex;  /*Flex 컨테이너 설정*/
+    flex-direction: row;  /*아이템이 배치되는 축 방향(가로로 나란히 배치) 설정*/
+    justify-content: center; /*아이템 간 공간 동일 분배*/
+    align-items: center; /*아이템 간 상단 맞추기*/
+}
+
+.framebox{
+    display: inline-flex;
+    width: 45%;
+    height: 500px;
+    flex-grow: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    justify-content: center; /*아이템 중앙 정렬*/
+    align-items: center;  /*아이템 중앙 정렬*/
+}
+
+.cell{
+    border: 6px solid #183119;
+}
+
+.vertical{
+    border-collapse: collapse; /*표의 셀 테두리를 합친다.*/
+    width: 40%;
+    height: 80%;
+}
+
+.horizontal{
+    border-collapse: collapse;
+    width: 80%;
+    height: 40%;
+}
+
+.fs-xs{font-size:0.5em}
+.fs-1x{font-size:1em}
+.fs-2x{font-size:2em}
+.fs-3x{font-size:3em}
+.fs-4x{font-size:4em}
+.fs-5x{font-size:5em}
+.fs-6x{font-size:6em}
+.fs-7x{font-size:7em}
+.fs-8x{font-size:8em}
+.fs-9x{font-size:9em}
+.fs-10x{font-size:10em}
+
+.ws-p-50 { padding: 50px; }
+.ws-mb-0 { margin-bottom: 0; }
+.ws-mb-30 { margin-bottom: 30px }
+.ws-mb-40 { margin-bottom: 40px; }
+.ws-mb-50 { margin-bottom: 50px; }
+.ws-mb-80 { margin-bottom: 80px; }
+.ws-bgcolor-1 { background-color: #cce377; }
+.ws-bgcolor-2 { background-color: #89a158; }
+.ws-bgcolor-3 { background-color: #556f3d; }
+.ws-bgcolor-4 { background-color: #324a28; }
+.ws-bgcolor-5 { background-color: #183119; }
+.ws-border-rounded { border-radius: 15px; }
