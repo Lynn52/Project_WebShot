@@ -139,12 +139,3 @@ btnNext.addEventListener("click", () => {
     movePage(nextPageUrl);
 });
 
-
-
-
-// 삭제 버튼 클릭 이벤트 핸들러
-const deleteButton = document.getElementById("delete");
-deleteButton.addEventListener("click", () => {
-    localStorage.clear();
-
-});
