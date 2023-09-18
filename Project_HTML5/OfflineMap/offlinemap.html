@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Photo booth</title>
+    <link rel="stylesheet" type="text/css" href="../WebShot/webshot.css">
+    <script src="https://kit.fontawesome.com/34759a147d.js" crossorigin="anonymous"></script> <!-- https://fontawesome.com/ -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Righteous&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCkohILt-ly13G4o38NFXTDDUYp5occaMg&callback=initMap&libraries=&v=weekly" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        #bound{
+            height: 60vh;
+            width: 100%;
+            margin: 0 auto 50px;
+        }
+
+        #map{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="ws-container-fluid" style="margin-bottom: 0px;">
+        <section class="ws-block ws-flex-center ws-mb-30 ws-bgcolor-1 ws-border-rounded">
+            <h1 class="highlight">Offline Photo booth</h1>
+            <span class="text1">가장 가까운 포토부스를 찾아보세요!</span>
+        </section>
+
+        <div id="bound">
+            <div id="map"></div>
+        </div>
+
+        <div class="frame-container ws-mb-50" style="gap: 20px;">
+            <div class="frame-container" style="gap: 5px;">
+                <img src="../img/blue.png"></img>
+                <div class="text1">현재 위치</div>
+            </div>
+    
+            <div class="frame-container" style="gap: 5px;">
+                <img src="../img/red.png"></img>
+                <div id="offline1" class="text1"></div>
+            </div>
+    
+            <div class="frame-container" style="gap: 5px;">
+                <img src="../img/purple.png"></img>
+                <div id="offline2" class="text1"></div>
+            </div>
+        </div>
+
+        <section class="ws-block ws-flex-center ws-bgcolor-5 ws-border-rounded">
+            <button id="home" class="btn btn-outline-success btn-lg" style="float:right;">
+                <i class="fa fa-house fa-solid fs-2x hightlight"></i></button>
+        </section>
+    </div>
+
+    <script src="offlinemap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>    
+</body>
+</html>

@@ -54,6 +54,76 @@ b {
     line-height:1
 }
 
+.filters-button-group {
+    text-align: right;
+    padding: 0;
+    margin: 0; 
+    font-size: xx-large;
+}
+
+.filters-button-group li {
+    display: inline-block;
+    list-style: none;
+    margin-left: 40px;
+}
+
+.ws-gallery {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;  /*자동 줄바꿈 허용*/
+    align-items: flex-start; /* 이미지를 수직으로 가운데 정렬하지 않고 위로 정렬 */
+    align-content: space-between; /* 이미지 간의 간격을 조절 */
+}
+
+.ws-gallery-item {
+    flex: 0 0 calc(33.333% - 20px); /* 한 줄에 세 개의 이미지가 들어가도록 설정. 여기서 20px은 margin을 고려한 값 */
+    border-radius: 12px;
+    margin: 10px;
+    overflow: hidden;
+    box-sizing: border-box; /* margin을 포함한 크기 계산을 위해 필요 */
+    transition: transform 0.3s;
+    border: 2px solid transparent; /* 투명한 테두리를 설정 */
+}
+
+/* 호버(Hover) 시 이미지 확대 */
+.ws-gallery-item:hover {
+    transform: scale(1.05); /* 1.05 배 확대 */
+}
+
+.ws-gallery-insert{
+    flex: 0 0 calc(33.333% - 20px); /* 한 줄에 세 개의 이미지가 들어가도록 설정. 여기서 20px은 margin을 고려한 값. */
+    border-radius: 12px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+    width: 100%;
+    height: 148px;
+    border: 2px solid #324a28;
+    background-color: #324a28;
+    opacity: 0.7;
+    text-align: center;
+    justify-content: center;
+}
+
+.ws-gallery-insert:hover{
+    transform: scale(1.05); /* 1.05 배 확대 */
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ws-footer { 
+    color: #999999; 
+    text-align: center;
+}
+
+.ws-link-gray { color: #999999; }
+
+
+
 .fs-1x{font-size:1em}
 .fs-2x{font-size:2em}
 .fs-3x{font-size:3em}
@@ -64,37 +134,6 @@ b {
 .fs-8x{font-size:8em}
 .fs-9x{font-size:9em}
 .fs-10x{font-size:10em}
-
-.filters-button-group {
-    text-align: right;
-    padding: 0;
-    margin: 0; 
-}
-
-.filters-button-group li {
-    display: inline-block;
-    list-style: none;
-    margin-left: 40px;
-}
-
-.filters-button-group li a.active { color: #F96699; }
-
-@media (max-width: 940px) {
-    .filters-button-group { text-align: left; }
-}
-
-@media (max-width: 489px) {
-    .tm-gallery-item {
-        width: 48%;
-        margin: 1%;
-        height: auto;
-    }
-    
-    .tm-gallery-item img {
-        width: 100%;
-        height: auto;
-    }
-}
 
 .ws-p-50 { padding: 50px; }
 .ws-mb-0 { margin-bottom: 0; }
